@@ -1,0 +1,135 @@
+/* gives all headers with class section heading a margin of 20% */
+.sectionHeading {
+  margin-left: 20%;
+}
+
+/* slideshow */
+.mySlides {
+  display: none
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgb(255, 0, 68);
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+/* make previous and next buttons invisible when width is 800px on desktop */
+@media only screen and (max-width: 800px) {
+  .prev, .next {
+    display: none;
+  }
+}
+
+/* S8+ page dimensions for prev next buttons */
+@media screen and (device-width: 360px) and (device-height: 740px) and (-webkit-device-pixel-ratio: 4) and (orientation: portrait) {
+
+  /* make buttons bigger and reduce margins */
+  .prev, .next {
+    margin-left: 1%;
+    margin-right: 1%;
+    padding: 30px;
+  }
+
+  /* make dots invisible */
+  .dots {
+    display: none;
+  }
+}
+
+/* S20 ultra page dimensions for prev next buttons */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+
+  /* make buttons bigger and reduce margins */
+  .prev, .next {
+    margin-left: 1%;
+    margin-right: 1%;
+    padding: 30px;
+  }
+
+  /* make dots invisible */
+  .dots {
+    display: none;
+  }
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  text-align: center;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* align dots to the center
+add margin to the top */
+.dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dotActive, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}

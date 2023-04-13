@@ -1,0 +1,599 @@
+/* [[[[[[[[[[[[[[[[[[[ This page contains css properties common to all pages ]]]]]]]]]]]]]]]]]]] */
+body {
+  font-family: sans-serif;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: white;
+  transition: 350ms;
+}
+
+/* || Header tag styles */
+h1,
+h2,
+h3 {
+  font-family: 'Strait', sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+h2 {
+  font-weight: 900;
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+/* pink headers are found in footer section of all pages */
+.pinkHeaders {
+  color: rgb(255, 0, 68);
+}
+
+/* || Dark Mode */
+/* These styles are added to the body and newsBlock divs to toggle dark mode */
+.body_darkMode {
+  background-color: #404040;
+  color: white;
+}
+
+/* prioritise background color */
+.newsBlock_darkMode {
+  background-color: #333 !important;
+  transition: 350ms;
+  color: white;
+}
+
+/* [[[[[[[[[[[[[[[[[[[ navigation Bar ]]]]]]]]]]]]]]]]]]] */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+}
+
+.brand-title {
+  font-size: 1.5rem;
+  margin: .5rem;
+  font-family: 'Strait', sans-serif;
+}
+
+.navLinkes ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navLinkes li {
+  list-style: none;
+}
+
+.navLinkes li a {
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  display: block;
+}
+
+.navLinkes li:hover {
+  background-color: #555;
+  transition: 0.2s;
+}
+
+.toggle-button {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+/* add style to the three bar divs to create hambuger icon */
+.toggle-button .bar1, .bar2, .bar3 {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* change from standard layout to hambuger icon when scren width is less than 600px on desktop */
+@media (max-width: 600px) {
+  .toggle-button {
+    display: flex;
+  }
+
+  .navLinkes {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navLinkes ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navLinkes li {
+    text-align: center;
+  }
+
+  .navLinkes li a {
+    padding: .5rem 1rem;
+  }
+
+  .navLinkes.active {
+    display: flex;
+    transition: 350ms;
+  }
+
+  /* css to rotate hambuger icon to create x */
+  .rotate-item .bar1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .rotate-item .bar2 {
+    opacity: 0;
+    transition-duration: 1ms;
+  }
+
+  .rotate-item .bar3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
+/* iphone 12 page dimensions for navigations bar */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  .brand-title {
+    font-size: 2.5rem;
+  }
+
+  .toggle-button {
+    display: flex;
+  }
+
+  .navLinkes {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navLinkes ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navLinkes li {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .navLinkes li a {
+    padding: .5rem 1rem;
+  }
+
+  .navLinkes.active {
+    display: flex;
+    transition: 350ms;
+  }
+
+  /* css to rotate hambuger icon to create x */
+  .rotate-item .bar1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .rotate-item .bar2 {
+    opacity: 0;
+    transition-duration: 1ms;
+  }
+
+  .rotate-item .bar3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
+/* S8+ page dimensions for navigations bar */
+@media screen and (device-width: 360px) and (device-height: 740px) and (-webkit-device-pixel-ratio: 4) and (orientation: portrait) {
+  .brand-title {
+    font-size: 2.5rem;
+  }
+
+  .toggle-button {
+    display: flex;
+  }
+
+  .navLinkes {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navLinkes ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navLinkes li {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .navLinkes li a {
+    padding: .5rem 1rem;
+  }
+
+  .navLinkes.active {
+    display: flex;
+    transition: 350ms;
+  }
+
+  /* css to rotate hambuger icon to create x */
+  .rotate-item .bar1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .rotate-item .bar2 {
+    opacity: 0;
+    transition-duration: 1ms;
+  }
+
+  .rotate-item .bar3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
+/* Galaxy S20 phone page dimensions for navigations bar */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4) and (orientation: portrait) {
+  .brand-title {
+    font-size: 2.5rem;
+  }
+
+  .toggle-button {
+    display: flex;
+  }
+
+  .navLinkes {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navLinkes ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navLinkes li {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .navLinkes li a {
+    padding: .5rem 1rem;
+  }
+
+  .navLinkes.active {
+    display: flex;
+    transition: 350ms;
+  }
+
+  /* css to rotate hambuger icon to create x */
+  .rotate-item .bar1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .rotate-item .bar2 {
+    opacity: 0;
+    transition-duration: 1ms;
+  }
+
+  .rotate-item .bar3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
+/* Read More more button */
+.hover_button {
+  width: 150px;
+  height: 40px;
+  border: none;
+  color: white;
+  background-color: rgb(255, 0, 68);
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 0 #1E90FF;
+  transition: ease 0.3s;
+  font-size: 1rem;
+  outbar: none;
+}
+
+/* animation when user hovers mouse over button */
+.hover_button:hover {
+  box-shadow: inset 200px 0 0 0 #1E90FF;
+  cursor: pointer;
+  color: #000;
+}
+
+/* [[[[[[[[[[[[[[[[[[[[[[[[[[News Stories section]]]]]]]]]]]]]]]]]]]]]]]]]] */
+.stories {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.newsBlock {
+  margin-top: 30px;
+  display: block;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding: 10px 100px;
+  background-color: whitesmoke;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  top: -8vw;
+}
+
+.newsBlock p {
+  letter-spacing: 0.33px;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  font-family: sofia-pro, sans-serif;
+  font-weight: 530;
+  margin: 5% 5% 5% 0;
+}
+
+/* Portrait mode for s8+ */
+@media screen and (device-width: 360px) and (device-height: 740px) and (-webkit-device-pixel-ratio: 4) and (orientation: portrait) {
+  h2 {
+    font-size: 3rem;
+  }
+
+  .newsBlock h3 {
+    font-size: 2.5rem;
+  }
+
+  .newsBlock {
+    margin-left: 1%;
+    margin-right: 1%;
+    top: -8vw;
+  }
+
+  .newsBlock button {
+    width: 200px;
+    height: 70px;
+    font-size: 1.7rem;
+  }
+
+  .imgDesc {
+    display: none;
+  }
+}
+
+/* Portrait mode for s20 ultra*/
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4) and (orientation: portrait) {
+  h2 {
+    font-size: 3rem;
+  }
+
+  .newsBlock h3 {
+    font-size: 2.5rem;
+  }
+
+  .newsBlock {
+    margin-left: 1%;
+    margin-right: 1%;
+    top: -8vw;
+  }
+
+  .newsBlock button {
+    width: 200px;
+    height: 70px;
+    font-size: 1.7rem;
+  }
+
+  .imgDesc {
+    display: none;
+  }
+}
+
+/* Portrait mode for iphone 12 */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+  h2 {
+    font-size: 3rem;
+  }
+
+  .newsBlock h3 {
+    font-size: 2.5rem;
+  }
+
+  .newsBlock {
+    margin-left: 1%;
+    margin-right: 1%;
+    top: -8vw;
+  }
+
+  .newsBlock button {
+    width: 200px;
+    height: 70px;
+    font-size: 1.7rem;
+  }
+
+  .imgDesc {
+    display: none;
+  }
+}
+
+/* mobile view for news stories */
+@media screen and (max-width: 700px) {
+  .newsBlock {
+    margin-left: 2%;
+    margin-right: 2%;
+
+    /* hide image description when screen size is 700px and lower */
+    .imgDesc {
+      display: none;
+    }
+  }
+}
+
+/* styles for images in news section */
+.NewsImage {
+  height: 300%;
+  object-fit: cover;
+  align-self: center;
+  display: inline-block;
+  transition: all 0.25s;
+}
+
+.imgDesc {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+}
+
+.newsBlockSections h2 {
+  margin-left: 20%;
+}
+
+/* news stories images */
+.NewsImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  align-self: center;
+  display: inline-block;
+  transition: all 0.25s;
+}
+
+/* iframe styles for embedded videos */
+.iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* center buttons in news block */
+.newsBlock button {
+  display: block;
+  margin: auto;
+}
+
+/* [[[[[[[[[[[[[[[[[[[ Footer Section ]]]]]]]]]]]]]]]]]]] */
+.footer-container {
+  margin-top: 30px;
+  background-color: #212329;
+  padding: 4rem 0 6rem 0;
+}
+
+.footer {
+  width: 80%;
+  height: 40vh;
+  background-color: #212329;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+  font-size: 1.5rem;
+}
+
+.footer-heading {
+  display: flex;
+  flex-direction: column;
+  margin-right: 4rem;
+}
+
+.footer-heading h2 {
+  margin-bottom: 2rem;
+}
+
+.footer-heading a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.footer-heading a:hover {
+  color: pink;
+  transition: 0.3s ease-out;
+}
+
+.footer-email-form h2 {
+  margin-bottom: 2rem;
+}
+
+#footer-email {
+  width: 250px;
+  height: 40px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  padding-left: 0.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+#footer-email::placeholder {
+  color: #b1b1b1;
+}
+
+#footer-email-btn {
+  width: 100px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #F9423D;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+}
+
+#footer-email-btn:hover {
+  cursor: pointer;
+  background-color: #337AF1;
+  transition: 0.4s ease-out;
+}
+
+/* hide footer 3 at necessary width */
+@media screen and (max-width: 1150px) {
+  .footer-3 {
+    display: none;
+  }
+
+  .footer-email-form {
+    margin-top: 2rem;
+  }
+}

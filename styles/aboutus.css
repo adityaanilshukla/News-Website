@@ -1,0 +1,60 @@
+/* //////////////Form Section////////////// */
+.form-inline {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
+  font-size: 1.5rem;
+}
+
+/* make label input textarea dynamic */
+.form-inline label {
+  margin: 15px 30% 15px 30%;
+}
+
+.form-inline input {
+  vertical-align: middle;
+  margin: 15px 30% 15px 30%;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  font-size: 1.5rem;
+}
+
+/* prevent user from resizing textarea */
+textarea {
+  resize: none;
+  margin: 15px 30% 15px 30%;
+  height: 150px;
+  font-size: 1.5rem;
+}
+
+#enquiry_types {
+  margin: 15px 30% 15px 30%;
+  height: 35px;
+}
+
+/* give input the same style as hover_button */
+input[type=submit] {
+  width: 150px;
+  height: 60px;
+  border: none;
+  color: white;
+  background-color: rgb(255, 0, 68);
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 0 #1E90FF;
+  transition: ease 0.3s;
+  font-size: 1rem;
+  outline: none;
+  display: block;
+  margin: auto;
+  font-size: 1.5rem;
+}
+
+input[type=submit]:hover {
+  box-shadow: inset 200px 0 0 0 #1E90FF;
+  cursor: pointer;
+  color: #000;
+}

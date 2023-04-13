@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Newspaper</title>
+  <!-- import Strait font from google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Strait&display=swap" rel="stylesheet">
+
+  <!-- Refrence style sheets
+  article for styles shared across multiple pages -->
+  <link rel="stylesheet" href="styles\article.css">
+
+  <!-- install handlebars script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar">
+    <!-- divs to create hambuger icon -->
+    <div class="brand-title">Newspaper</div>
+    <a href="#" class="toggle-button">
+      <span class="bar1"></span>
+      <span class="bar2"></span>
+      <span class="bar3"></span>
+    </a>
+    <div class="brand-title"></div>
+    <div class="navLinkes">
+      <ul>
+        <!-- icon that onclick excecutes function to toggle darkmode -->
+        <li><a id="dark-mode-toggle"><i><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M12 2A10 10 0 0 0 2 12A10 10 0 0 0 12 22A10 10 0 0 0 22 12A10 10 0 0 0 12 2M12 4A8 8 0 0 1 20 12A8 8 0 0 1 12 20V4Z" />
+              </svg></i> </a>
+        </li>
+        <!-- links to other pages -->
+        <li><a href="index.html">Home</a> </li>
+        <li><a href="headlines.html">Headlines</a> </li>
+        <li><a href="finance.html">Finance</a></li>
+        <li><a href="sports.html">Sports</a></li>
+        <li><a href="aboutus.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <h1>Headlines</h1>
+  <!-- article will be added into this div when user clicks read more -->
+  <div id="addArticleHere">
+
+  </div>
+
+  <!-- newsBlocks containing information about headlines articles will be added to this div using handlebars -->
+  <div id="headlines">
+
+  </div>
+
+
+  <div class="footer-container">
+    <div class="footer">
+      <div class="footer-heading footer-1">
+        <h2 class="pinkHeaders">Our Site</h2>
+        <a href="aboutus.html#aboutus">About Us</a>
+        <a href="aboutus.html#ContactUs">Contact Us</a>
+
+      </div>
+      <div class="footer-heading footer-2">
+        <h2 class="pinkHeaders">Social Media</h2>
+        <a href="https://www.facebook.com/login.php?next=https%3A%2F%2Fwww.facebook.com%2Fpages">Facebook</a>
+        <a href="https://twitter.com/?lang=en">Twitter</a>
+        <a href="https://www.instagram.com/accounts/emailsignup/?hl=en">Instagram</a>
+      </div>
+
+      <div class="footer-heading footer-3">
+        <h2 class="pinkHeaders">Grade</h2>
+        <a href="report.html">Report</a>
+        <a href="report.html">Refrences</a>
+      </div>
+
+      <!-- form to enter email
+      checks wheather email is valid on submit excecutes a function that creates an alert -->
+      <div class="footer-email-form">
+        <h2 class="pinkHeaders">Join our newsletter</h2>
+        <form onsubmit="thankYouFunction()">
+          <input type="email" placeholder="Enter your email address" id="footer-email" required>
+          <input type="submit" value="Sign Up" id="footer-email-btn">
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+<!-- script containing all data in arrays -->
+<script src="Scripts\data.js"></script>
+<!-- script containing for loop to loop over all headlines articles in data.js and add it to headlines div -->
+<script src="Scripts\sections.js"></script>
+<!-- script to add articles to page -->
+<script src="Scripts\article.js"></script>
+
+</html>

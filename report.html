@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Report</title>
+</head>
+
+<body>
+    <h2>Introduction</h2>
+
+    <p>My site tells the story of a small non-profit news organisation called newspaper. Newspaper has three major sections on their website; headlines, finance and sports.
+      I have implemented a hierarchal model structure based on these three sections.Each section contains two articles, resulting in a total of six articles. Each article
+      can be read on the index.html page or its relevant section page. The website uses handlebars to update the HTML contents of each page, allowing the user to read
+      an article without being redirected to a new page. This enables the website to contain six articles within the five HTML page limit.</p>
+
+    <h2>Inspiration</h2>
+
+    <p>My site is heavily inspired by the website of Apple Inc. Apple incorporates a clean and minimalistic design approach.
+      This results in an easy-to-use UI. I applied a similar design aesthetic and colour theme to my site.</p>
+
+    <p>Secondly, I was inspired by YouTube to implement dark mode. As looking at a page with white spaces for hours on end can be
+      tiring for our eyes. Therefore, I implemented this feature on my website.</p>
+
+    <p>A YouTuber who inspired me was Dev Ed. Dev Ed uses animations on the websites he designs. An animation I took inspiration from was Dev Ed’s hamburger icon animation. When a user clicks on the hamburger icon in the navigation bar, the icon
+      rotates
+      to create an X icon. I took inspiration from this and applied a similar animation on my website.</p>
+
+    <h2>Accessibility</h2>
+
+    <p>My website incorporates multiple guidelines to make it accessible for people with disabilities. </p>
+
+    <p>For people with colour blindness or visual impairment, I have included sufficient contrast in the colour palette. WCAG 2.0 guidelines prescribe a minimum contrast ratio of 4.5:1. I have implemented these recommendations.</p>
+
+    <p>All images on my website are paired with alt tags. This allows users with vision impairment to hover over an image and have a screen reader describe the image to them.</p>
+
+    <p>Lastly my website comes with the ability to toggle between light and dark mode. This is done to allow users with photophobia to use the site for extended periods without hurting their eyes.</p>
+
+    <h2>Usability</h2>
+
+    <p>Taking usability in mind, my site comes equipped with a responsive navigation bar. Links to all other pages in my site are legible on a desktop sized screen. When the site is resized to a smaller window, the links are replaced with a hamburger
+      icon. The user has to click on this icon to display all other page links. This adds the functionality of a large screen on a smaller device without making the page look cluttered.</p>
+
+    <p>Typically to indicate that a clicking on an element performs an action, websites turn the cursor into a pointer. To further emphasize this functionality to the user, my website contains animations. Hovering the cursor over a link in the
+      navigation
+      bar causes the link to change colour. Furthermore, hovering over a button causes a sliding animation. This makes it especially clear to the user that an action is performed upon clicking the element.</p>
+    <p>Lastly, I have implemented font and div sizing using @media screen width queries. This is done such that such that the articles are legible not only on a desktop device, but also on a smartphone.</p>
+
+    <h2>Insights gained during the project </h2>
+
+    <p>I learned how to use the handlebars templating engine. I had initially made my website using regular HTML and JavaScript. Implementing handlebars afterwards resulted in error messages. By watching tutorials on Coursera and YouTube, I was able
+      to
+      work through the errors to get my website to work.</p>
+
+    <p>Secondly, I learned about resizing HTML elements for mobile devices. On mobile devices users interact with the page using a touch screen. On a desktop device this interaction takes place using a cursor. To make the website usable on mobile the
+      size of the page elements has to increase accordingly. I discovered this issue when I tried accessing my site on my mobile phone, where I found the elements too small to interact with. I used @media quires to force elements such as buttons and
+      icons to resize.</p>
+
+    <p>Lastly, I learned about local storage. Whenever I would turn on dark mode and load new page, the new page would automatically be set back to light mode. This was occurring as I was using a Boolean operator to set dark mode to be either true or
+      false. This operator was being overwritten as JavaScript pages are reloaded each time a new page is launched. To figure out how to pass data between pages I looked at various forum posts on stack overflow where I uncovered local storage. The
+      local
+      storage object records data with no expiration date. The data is not deleted when new pages are launched. Using local storage, my website knows that the dark mode status selected by the user on previous pages.</p>
+
+
+    <h2>Aspects that worked well</h2>
+
+    <p>An aspect of my website that work well is the use of the handlebars templating engine. This allowed my website to be more dynamic as changing an element at the source would dynamically update all pages on the site. Furthermore, the use of
+      handlebars enabled me to simplify the websites HTML pages.</p>
+
+    <h2>Aspects that could be improved</h2>
+
+    <p>The font sizes on the website could be made more responsive using the clamp function. Presently my website is hard coded to be legible on various popular phone models using @media queries. If a user where to access my site on a phone with an
+      uncommon screen size the styling rules would not be followed. The clamp function selects a value between a set upper and lower bound. This enables the website to automatically select a desirable value between the predefined limits.</p>
+
+    <h2>Site Map</h2>
+    <img src="Report images\Sitemap" alt="site map">
+
+    <h2>Wireframe</h2>
+    <h3>Home Page</h3>
+    <img src="Report images\Home page wire frame.png" alt="Home page Wireframe">
+
+    <h3>Headlines Page</h3>
+    <img src="Report images\Home page wire frame.png" alt="Headlines page wireframe">
+
+    <h3>Finance Page</h3>
+    <img src="Report images\Finance Page wire frame.png" alt="Finance page wireframe">
+
+    <h3>Sports page</h3>
+    <img src="Report images\Sports page wire frame.png" alt="Sports page wireframe">
+
+    <h3>About page</h3>
+    <img src="Report images\About page wire frame.png" alt="About page wireframe">
+
+    <h2 id="refrences">Refrences</h2>
+
+
+</body>
+
+</html>
